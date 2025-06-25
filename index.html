@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phonebook Project</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Phonebook</h1>
+    </header>
+
+    <section>
+        <h2>Contacts List</h2>
+        <button id="addPopupBtn">Add(+)</button>
+        <button onclick="deleteAllBtn()">Delete(-)</button>
+
+        <div id="popup" class="popup">
+            <div class="container">
+                <div class="popup-content">
+                    <span class="close" id="closePopupBtn">&times;</span>
+                    <h3 id="popupTitle">Contact Form</h3>
+                    <form id="contactForm">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required><br><br>
+
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required><br><br>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+
+                        <button type="submit">Save</button>
+
+                        <!-- Detail Popup  - Project. Path#3    -->
+                        <div id="detailPopup" class="popup-overlay" style="display:none">
+                            <button id="closeDetailPopup" class="close-btn">❌</button>
+                            <div id="detailContent"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <ul id="contactList"></ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Nadia Burbara and Waseem Shehade</p>
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+</html>
